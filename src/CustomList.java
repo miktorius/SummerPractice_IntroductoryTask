@@ -28,9 +28,6 @@ public class CustomList<T> {
     private void ensureCapacity(int capacity) {
         if (capacity > elements.length) {
             int newCapacity = elements.length * 2;
-            if (newCapacity < capacity) {
-                newCapacity = capacity;
-            }
             Object[] newElements = new Object[newCapacity];
             System.arraycopy(elements, 0, newElements, 0, size);
             elements = newElements;
